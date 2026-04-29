@@ -257,6 +257,9 @@
   .bg-\[url\(\)\] {
     background-image: url();
   }
+  .bg-\[url\(\.\.\/assets\/img\/golden-knight-background-mobile\.png\)\] {
+    background-image: url(../assets/img/golden-knight-background-mobile.png);
+  }
   .bg-\[url\(\.\.\/assets\/img\/golden-knight-background\.png\)\] {
     background-image: url(../assets/img/golden-knight-background.png);
   }
@@ -345,6 +348,11 @@
   .md\:gap-16 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:bg-\[url\(\.\.\/assets\/img\/golden-knight-background-desktop\.png\)\] {
+    @media (width >= 48rem) {
+      background-image: url(../assets/img/golden-knight-background-desktop.png);
     }
   }
   .md\:px-32 {
