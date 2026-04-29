@@ -21,13 +21,23 @@
             <p class="font-bold text-2xl">ADILA</p>
             <div class="navbar_links">
               <h3 class="text-4xl font-bold md:hidden">ADILA</h3>
-              <ul class="md:flex md:flex-row md:gap-16">
-                <a href="#about-me"> <li>About me</li> </a>
-                <a href="#projects"> <li>Projets</li> </a>
-                <a href="#">
+              <ul class="md:flex md:flex-row md:gap-14 md:uppercase md:text-lg">
+                <a
+                  href="#about-me"
+                  class="md:hover:underline md:underline-offset-8"
+                >
+                  <li>About me</li>
+                </a>
+                <a
+                  href="#projects"
+                  class="md:hover:underline md:underline-offset-8"
+                >
+                  <li>Projets</li>
+                </a>
+                <a href="#" class="md:hover:underline md:underline-offset-8">
                   <li>Ma boîte à outils</li>
                 </a>
-                <a href="#contact">
+                <a href="#contact" class="md:hidden">
                   <li>Contact</li>
                 </a>
               </ul>
@@ -38,11 +48,20 @@
         <!-- Header (END) -->
         <!-- Hero (START) -->
         <section
-          class="hero flex flex-col flex-1 justify-between items-center pt-24 pb-16"
+          class="hero flex flex-col flex-1 justify-between items-center pt-24 pb-16 md:w-220 md:self-end md:pr-55 md:pt-58"
         >
           <!-- Hero title -->
-          <h1 class="text-5xl md:text-8xl">
-            Je transforme des lignes de codes en expériences mémorables.
+          <h1
+            class="text-5xl md:text-7xl md:text-right md:drop-shadow-black/25"
+          >
+            <span class="hidden md:block"
+              >Je transforme des lignes de codes <br />
+              en expériences mémorables.</span
+            >
+            <span class="block md:hidden"
+              >Je transforme des lignes de codes en expériences
+              mémorables.</span
+            >
           </h1>
           <div class="hero_links flex flex-col items-center gap-6">
             <!-- CTA button -->
