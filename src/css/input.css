@@ -28,3 +28,38 @@ h1 {
   /* Colors */
   --color-beige-500: #fcf9ef;
 }
+
+@plugin "daisyui/theme" {
+  name: "light-mode-theme";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #fbfbfb;
+  --color-base-200: oklch(98% 0.001 106.423);
+  --color-base-300: #ffe3cf;
+  --color-base-content: #170e02;
+  --color-primary: #caaa96;
+  --color-primary-content: #fcf9ef;
+  --color-secondary: #7f5e55;
+  --color-secondary-content: #fcf9ef;
+  --color-accent: #8f9ca9;
+  --color-accent-content: #fcf9ef;
+  --color-neutral: #170e02;
+  --color-neutral-content: #fcf9ef;
+  --color-info: oklch(45.2% 0.083 244.4);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: #6a997d;
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(72.6% 0.132 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(57.2% 0.131 45.7);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.28125rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
