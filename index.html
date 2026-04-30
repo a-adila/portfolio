@@ -7,34 +7,108 @@
     <link rel="stylesheet" href="src/css/output.css" />
   </head>
   <body>
-    <!-- npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch -->
+    <div class="fullpage_container">
+      <!-- npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch -->
 
-    <!-- To get the background image -->
-    <div class="homepage_wrapper h-dvh">
-      <!-- Homepage background -->
-      <div
-        class="h-full px-4 md:px-32 md:pb-16 text-beige-500 flex flex-col md:flex-col bg-[url(../assets/img/golden-knight-background-mobile.png)] bg-cover md:bg-[url(../assets/img/golden-knight-background-desktop.png)]"
-      >
-        <!-- Header (START) -->
-        <header class="pt-14">
-          <nav class="navbar flex flex-row justify-between items-center">
-            <p class="font-bold text-2xl">ADILA</p>
-            <div class="navbar_links">
+      <!-- To get the background image -->
+      <div class="homepage_wrapper h-dvh">
+        <!-- Homepage background -->
+        <div
+          class="h-full px-4 md:pb-16 text-beige-500 flex flex-col md:flex-col bg-[url(../assets/img/golden-knight-background-mobile.png)] bg-cover md:bg-[url(../assets/img/golden-knight-background-desktop.png)]"
+        >
+          <!-- Header (START) -->
+          <header class="pt-14 flex flex-row">
+            <!-- Navbar (START) -->
+            <nav class="navbar flex flex-row justify-between items-center">
+              <!-- Logo -->
+              <p class="font-bold text-2xl md:text-4xl">ADILA</p>
+              <div
+                class="navbar__menu-and-buttons flex flex-row items-center gap-40"
+              >
+                <div class="navbar_links hidden md:block">
+                  <h3 class="text-4xl font-bold md:hidden">ADILA</h3>
+                  <ul
+                    class="md:flex md:flex-row md:gap-14 md:uppercase md:text-lg"
+                  >
+                    <a
+                      href="#about-me"
+                      class="md:hover:underline md:underline-offset-8 decoration-2"
+                    >
+                      <li>About me</li>
+                    </a>
+                    <a
+                      href="#projects"
+                      class="md:hover:underline md:underline-offset-8 decoration-2"
+                    >
+                      <li>Projets</li>
+                    </a>
+                    <a
+                      href="#"
+                      class="md:hover:underline md:underline-offset-8 decoration-2"
+                    >
+                      <li>Ma boîte à outils</li>
+                    </a>
+                    <a href="#contact" class="md:hidden">
+                      <li>Contact</li>
+                    </a>
+                  </ul>
+                </div>
+                <img
+                  src="src/assets/img/icons/burger-menu.svg"
+                  alt="Ouvrir le menu latéral"
+                  class="h-8 md:hidden"
+                />
+                <div class="navbar__right-side flex flex-row gap-10">
+                  <!-- CTA desktop -->
+                  <button
+                    class="hidden md:block md:uppercase w-38 md:w-38 font-bold border px-5 py-3 rounded-4xl bg-white/20 shadow-inner"
+                  >
+                    On s'écrit ?
+                  </button>
+                  <!-- Night mode (DESKTOP) -->
+                  <img
+                    src="src/assets/img/icons/night-mode-icon.svg"
+                    alt=""
+                    class="hidden md:block"
+                  />
+                </div>
+              </div>
+            </nav>
+            <!-- Night mode (MOBILE) -->
+            <img
+              src="src/assets/img/icons/night-mode-icon.svg"
+              alt=""
+              class="md:hidden block"
+            />
+            <!-- Navbar (END) -->
+          </header>
+          <!-- Header (END) -->
+          <!-- Hero (START) -->
+          <section
+            class="hero flex flex-col flex-1 justify-between items-center pt-24 pb-16 md:w-220 md:self-end md:pr-55 md:pt-40 md:gap-20"
+          >
+            <!-- Side menu mobile -->
+            <div
+              class="navbar_links md:hidden border border-white bg-white/40 shadow-inner absolute top-28 h-150 flex flex-col justify-center gap-20 px-16 py-25"
+            >
               <h3 class="text-4xl font-bold md:hidden">ADILA</h3>
-              <ul class="md:flex md:flex-row md:gap-14 md:uppercase md:text-lg">
+              <ul class="flex flex-col gap-7 uppercase text-lg">
                 <a
                   href="#about-me"
-                  class="md:hover:underline md:underline-offset-8"
+                  class="md:hover:underline md:underline-offset-8 decoration-2"
                 >
                   <li>About me</li>
                 </a>
                 <a
                   href="#projects"
-                  class="md:hover:underline md:underline-offset-8"
+                  class="md:hover:underline md:underline-offset-8 decoration-2"
                 >
                   <li>Projets</li>
                 </a>
-                <a href="#" class="md:hover:underline md:underline-offset-8">
+                <a
+                  href="#"
+                  class="md:hover:underline md:underline-offset-8 decoration-2"
+                >
                   <li>Ma boîte à outils</li>
                 </a>
                 <a href="#contact" class="md:hidden">
@@ -42,75 +116,75 @@
                 </a>
               </ul>
             </div>
-            <!-- <img src="src/assets/img/icons/burger-menu.svg" alt="Ouvrir le menu latéral" class="h-8 md:hidden"/> -->
-          </nav>
-        </header>
-        <!-- Header (END) -->
-        <!-- Hero (START) -->
-        <section
-          class="hero flex flex-col flex-1 justify-between items-center pt-24 pb-16 md:w-220 md:self-end md:pr-55 md:pt-58"
-        >
-          <!-- Hero title -->
-          <h1
-            class="text-5xl md:text-7xl md:text-right md:drop-shadow-black/25"
-          >
-            <span class="hidden md:block"
-              >Je transforme des lignes de codes <br />
-              en expériences mémorables.</span
+            <!-- Hero title -->
+            <h1
+              class="text-5xl md:text-7xl md:text-right drop-shadow-black/25 md:drop-shadow-black/25"
             >
-            <span class="block md:hidden"
-              >Je transforme des lignes de codes en expériences
-              mémorables.</span
-            >
-          </h1>
-          <div class="hero_links flex flex-col items-center gap-6">
-            <!-- CTA button -->
-            <button
-              class="w-38 uppercase font-bold border border-white px-5 py-3 rounded-4xl bg-white/20 blur-[~10px] shadow-inner"
-            >
-              On tente ?
-            </button>
-            <div class="flex flex-row gap-6">
-              <a href="https://github.com/a-adila/Portfolio"
-                ><img
-                  src="src/assets/img/icons/github-icon.svg"
-                  alt="Mon profil GitHub"
-              /></a>
-              <a href="https://www.linkedin.com/in/adila-k/"
-                ><img
-                  src="src/assets/img/icons/linkedin-icon.svg"
-                  alt="Mon profil LinkedIn"
-              /></a>
-              <a href="#"
-                ><img
-                  src="src/assets/img/icons/whatsapp-icon.svg"
-                  alt="Me contacter sur WhatsApp"
-              /></a>
-              <a href="#"
-                ><img
-                  src="src/assets/img/icons/download-icon.svg"
-                  alt="Télécharger mon CV"
-              /></a>
+              <span class="hidden md:block"
+                >Je transforme des lignes de codes <br />
+                en expériences mémorables.</span
+              >
+              <span class="block md:hidden"
+                >Je transforme des lignes de codes en expériences
+                mémorables.</span
+              >
+            </h1>
+            <div class="hero__links flex flex-col items-center gap-6 md:gap-9">
+              <div class="hero__buttons md:flex md:flex-row md:gap-14">
+                <!-- CTA button -->
+                <button
+                  class="w-38 uppercase font-bold border border-white px-5 py-3 rounded-4xl bg-white/20 blur-[~10px] shadow-inner hidden md:block"
+                >
+                  Mes projets
+                </button>
+                <button
+                  class="w-38 uppercase font-bold border border-white px-5 py-3 rounded-4xl bg-white/20 blur-[~10px] shadow-inner"
+                >
+                  On tente ?
+                </button>
+              </div>
+              <div class="flex flex-row gap-6">
+                <a href="https://github.com/a-adila/Portfolio"
+                  ><img
+                    src="src/assets/img/icons/github-icon.svg"
+                    alt="Mon profil GitHub"
+                /></a>
+                <a href="https://www.linkedin.com/in/adila-k/"
+                  ><img
+                    src="src/assets/img/icons/linkedin-icon.svg"
+                    alt="Mon profil LinkedIn"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="src/assets/img/icons/whatsapp-icon.svg"
+                    alt="Me contacter sur WhatsApp"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="src/assets/img/icons/download-icon.svg"
+                    alt="Télécharger mon CV"
+                /></a>
+              </div>
             </div>
-          </div>
-          <!-- Arrow scroll down -->
-          <a href="#about-me"
+            <!-- Arrow scroll down -->
+            <a href="#about-me"
+              ><img
+                src="src/assets/img/icons/arrow-down.svg"
+                alt="Aller à la section À propos"
+                class="md:hidden"
+            /></a>
+          </section>
+          <!-- DESKTOP Arrow scroll down -->
+          <a href="about-me" class="block self-center"
             ><img
               src="src/assets/img/icons/arrow-down.svg"
               alt="Aller à la section À propos"
-              class="md:hidden"
+              class="hidden md:block w-16"
           /></a>
-        </section>
-        <!-- DESKTOP Arrow scroll down -->
-        <a href="about-me" class="block self-center"
-          ><img
-            src="src/assets/img/icons/arrow-down.svg"
-            alt="Aller à la section À propos"
-            class="hidden md:block w-16"
-        /></a>
-        <!-- Hero (END) -->
+          <!-- Hero (END) -->
+        </div>
+        <!-- Homepage wrapper (END) -->
       </div>
-      <!-- Homepage wrapper (END) -->
     </div>
   </body>
 </html>
