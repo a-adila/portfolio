@@ -14,33 +14,6 @@
   font-style: normal;
 }
 
-@plugin "daisyui/theme" {
-  name: "light-mode-theme";
-  default: true;
-  prefersdark: false;
-  color-scheme: "light";
-  --color-base-100: #fbfbfb;
-  --color-base-200: oklch(98% 0.001 106.423);
-  --color-base-300: #ffe3cf;
-  --color-base-content: #170e02;
-  --color-primary: #caaa96;
-  --color-primary-content: #fcf9ef;
-  --color-secondary: #7f5e55;
-  --color-secondary-content: #fcf9ef;
-  --color-accent: #8f9ca9;
-  --color-accent-content: #fcf9ef;
-  --color-neutral: #170e02;
-  --color-neutral-content: #fcf9ef;
-  --radius-selector: 2rem;
-  --radius-field: 2rem;
-  --radius-box: 2rem;
-  --size-selector: 0.21875rem;
-  --size-field: 0.28125rem;
-  --border: 2px;
-  --depth: 0;
-  --noise: 0;
-}
-
 body {
   font-family: "FigtreeRegular";
 }
