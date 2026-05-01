@@ -185,14 +185,14 @@
           ><img
             src="src/assets/img/icons/arrow-down.svg"
             alt="Aller à la section À propos"
-            class="hidden md:block w-16 md:mb-8 md:w-[58px]"
+            class="hidden md:block w-16 md:mb-8 md:w-14.5"
         /></a>
         <!-- Hero (END) -->
       </div>
       <!-- Homepage wrapper (END) -->
     </div>
     <!-- Homepage background (END)-->
-    <main class="main__container md:px-25 px-4">
+    <main class="main__container md:px-25 px-4 md:text-lg">
       <section id="about-me">
         <h2 class="about-me__title">About me</h2>
         <p class="about-me__subtitle">
@@ -225,7 +225,42 @@
       <section id="tools">
         <h2 class="tools__title">Ma boîte à outils</h2>
       </section>
-      <section class="" id="contact-me"></section>
+      <section class="contact-me" id="contact-me">
+        <div>
+          <h2 class="contact-me__title">
+            Vous avec un projet en tête ou vous souhaitez travailler avec moi ?
+            Envoyez-moi un message !
+          </h2>
+          <div>
+            <a href=""><img src="" alt="" class="footer__socials" /></a
+            ><a href=""><img src="" alt="" class="footer__socials" /></a
+            ><a href=""><img src="" alt="" class="footer__socials" /></a>
+          </div>
+        </div>
+
+        <form action="#">
+          <div class="contact-me__inputs">
+            <div>
+              <label for="name">votre Prénom - Nom</label
+              ><input type="text" placeholder="Prénom - Nom" />
+            </div>
+            <div>
+              <label for="email">Votre email</label
+              ><input type="email" placeholder="hello@me.fr" />
+            </div>
+          </div>
+          <div>
+            <label for="message">Votre message</label>
+            <textarea
+              name=""
+              id=""
+              class="contact-me__message"
+              placeholder="Votre message"
+            ></textarea
+            ><button class="contact__button">Envoyer</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer flex flex-col items-center py-8 md:py-13 gap-5">
       <h3 class="footer__title">ADILA</h3>

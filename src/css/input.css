@@ -23,8 +23,15 @@ section h2 {
   font-family: "BroadsheetRegular";
 }
 
-.main__container section {
-  padding: 100px 235px;
+@media (width >= 48rem) {
+  .main__container section {
+    padding: 100px 235px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
 @theme {
   /* Fonts */

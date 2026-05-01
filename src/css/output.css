@@ -394,6 +394,11 @@
       display: none;
     }
   }
+  .md\:w-14\.5 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 14.5);
+    }
+  }
   .md\:w-38 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 38);
@@ -402,11 +407,6 @@
   .md\:w-160 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 160);
-    }
-  }
-  .md\:w-\[58px\] {
-    @media (width >= 48rem) {
-      width: 58px;
     }
   }
   .md\:flex-col {
@@ -563,8 +563,14 @@ body {
 h1, section h2 {
   font-family: "BroadsheetRegular";
 }
-.main__container section {
-  padding: 100px 235px;
+@media (width >= 48rem) {
+  .main__container section {
+    padding: 100px 235px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 3rem;
+  }
 }
 @property --tw-border-style {
   syntax: "*";
