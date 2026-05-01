@@ -23,6 +23,9 @@ section h2 {
   font-family: "BroadsheetRegular";
 }
 
+.main__container section {
+  padding: 100px 235px;
+}
 @theme {
   /* Fonts */
   --font-figtreeRegular: "FigtreeRegular", sans-serif;
