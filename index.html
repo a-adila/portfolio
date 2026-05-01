@@ -11,6 +11,7 @@
 
     <!-- Homepage background -->
     <div
+      id="homepage"
       class="homepage_wrapper h-dvh bg-[url(../assets/img/golden-knight-background-mobile.png)] bg-cover md:bg-[url(../assets/img/golden-knight-background-desktop.png)]"
     >
       <!-- Homepage wrapper (START) -->
@@ -22,7 +23,7 @@
           <!-- Navbar (START) -->
           <nav class="navbar flex flex-row justify-between">
             <!-- Logo -->
-            <p class="font-bold text-2xl md:text-4xl">ADILA</p>
+            <h3 class="font-bold text-2xl md:text-4xl">ADILA</h3>
             <div
               class="navbar__menu-and-buttons flex flex-row items-center gap-40"
             >
@@ -183,7 +184,7 @@
           ><img
             src="src/assets/img/icons/arrow-down.svg"
             alt="Aller à la section À propos"
-            class="hidden md:block w-16 md:mb-5 md:w-[58px]"
+            class="hidden md:block w-16 md:mb-8 md:w-[58px]"
         /></a>
         <!-- Hero (END) -->
       </div>
@@ -198,6 +199,24 @@
       <section id="tools"></section>
       <section class="" id="contact-me"></section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer flex flex-col items-center py-8 md:py-13 gap-5">
+      <h3 class="footer__title">ADILA</h3>
+      <a href="#homepage"
+        ><img
+          src="src/assets/img/icons/arrow-up.svg"
+          alt=""
+          class="footer__scroll-up"
+      /></a>
+      <ul class="footer__navbar hidden md:flex flex-row uppercase gap-18">
+        <li class="footer__navbar__links">
+          <a href="#about-me">About me</a>
+        </li>
+        <li class="footer__navbar__links">
+          <a href="#projects">Mes projets</a>
+        </li>
+        <li class="footer__navbar__links"><a href="#tools">Skills</a></li>
+      </ul>
+      <p class="mentions">2026 - Made by Adila with &#9829;</p>
+    </footer>
   </body>
 </html>

@@ -261,6 +261,9 @@
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -269,6 +272,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-18 {
+    gap: calc(var(--spacing) * 18);
   }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
@@ -328,6 +334,12 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-13 {
+    padding-block: calc(var(--spacing) * 13);
   }
   .py-25 {
     padding-block: calc(var(--spacing) * 25);
@@ -428,6 +440,11 @@
   .md\:mb-5 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mb-8 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 8);
     }
   }
   .md\:mb-10 {
@@ -619,6 +636,11 @@
   .md\:px-16 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:py-13 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 13);
     }
   }
   .md\:pt-10 {
