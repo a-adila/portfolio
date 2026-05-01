@@ -21,10 +21,11 @@ body {
 h1 {
   font-family: "BroadsheetRegular";
 }
+
 @theme {
   /* Fonts */
   --font-figtreeRegular: "FigtreeRegular", sans-serif;
-  --font-broadsheetRegular: "BroadsheetRegular", serief;
+  --font-broadsheetRegular: "BroadsheetRegular", serif;
   /* Colors */
   --color-beige-500: #fcf9ef;
 }
