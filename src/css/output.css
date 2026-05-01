@@ -309,6 +309,9 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
+  .px-25 {
+    padding-inline: calc(var(--spacing) * 25);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -459,6 +462,11 @@
       background-image: url(../assets/img/golden-knight-background-desktop.png);
     }
   }
+  .md\:px-25 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 25);
+    }
+  }
   .md\:py-13 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 13);
@@ -555,7 +563,7 @@
 body {
   font-family: "FigtreeRegular";
 }
-h1 {
+h1, section h2 {
   font-family: "BroadsheetRegular";
 }
 @property --tw-border-style {
