@@ -7,10 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-indigo-200: oklch(87% 0.065 274.039);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xs: 20rem;
+    --container-lg: 32rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -21,11 +22,12 @@
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
+    --font-weight-light: 300;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-4xl: 2rem;
+    --blur-xs: 4px;
+    --blur-sm: 8px;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-beige-500: #fcf9ef;
@@ -183,20 +185,14 @@
   .absolute {
     position: absolute;
   }
-  .top-0\.5 {
-    top: calc(var(--spacing) * 0.5);
-  }
-  .top-6 {
-    top: calc(var(--spacing) * 6);
-  }
   .top-28 {
     top: calc(var(--spacing) * 28);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .right-4 {
-    right: calc(var(--spacing) * 4);
+  .z-20 {
+    z-index: 20;
   }
   .block {
     display: block;
@@ -207,20 +203,15 @@
   .hidden {
     display: none;
   }
+  .size-fit {
+    width: fit-content;
+    height: fit-content;
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
-  .h-52 {
-    height: calc(var(--spacing) * 52);
-  }
-  .h-100 {
-    height: calc(var(--spacing) * 100);
-  }
   .h-150 {
     height: calc(var(--spacing) * 150);
-  }
-  .h-200 {
-    height: calc(var(--spacing) * 200);
   }
   .h-dvh {
     height: 100dvh;
@@ -233,6 +224,21 @@
   }
   .w-38 {
     width: calc(var(--spacing) * 38);
+  }
+  .w-\[20px\] {
+    width: 20px;
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-lg {
+    width: var(--container-lg);
+  }
+  .w-xs {
+    width: var(--container-xs);
   }
   .flex-1 {
     flex: 1;
@@ -252,6 +258,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -261,9 +270,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-14 {
-    gap: calc(var(--spacing) * 14);
-  }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
@@ -272,6 +278,9 @@
   }
   .self-center {
     align-self: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
@@ -293,12 +302,6 @@
       background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
   }
-  .bg-white\/40 {
-    background-color: color-mix(in srgb, #fff 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
   .bg-white\/80 {
     background-color: color-mix(in srgb, #fff 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -311,6 +314,9 @@
   .bg-cover {
     background-size: cover;
   }
+  .fill-black {
+    fill: var(--color-black);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -320,14 +326,8 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
-  .px-32 {
-    padding-inline: calc(var(--spacing) * 32);
-  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
-  }
-  .py-24 {
-    padding-block: calc(var(--spacing) * 24);
   }
   .py-25 {
     padding-block: calc(var(--spacing) * 25);
@@ -361,8 +361,15 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
   .text-beige-500 {
     color: var(--color-beige-500);
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .uppercase {
     text-transform: uppercase;
@@ -382,16 +389,56 @@
     --tw-blur: blur(~10px);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .blur-\[\~100px\] {
-    --tw-blur: blur(~100px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .drop-shadow-black\/25 {
     --tw-drop-shadow-color: color-mix(in srgb, #000 25%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-drop-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 25%, transparent) var(--tw-drop-shadow-alpha), transparent);
     }
     --tw-drop-shadow: var(--tw-drop-shadow-size);
+  }
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-blur-xs {
+    --tw-backdrop-blur: blur(var(--blur-xs));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .text-shadow-black\/25 {
+    --tw-text-shadow-color: color-mix(in srgb, #000 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 25%, transparent) var(--tw-text-shadow-alpha), transparent);
+    }
+  }
+  .text-shadow-xs {
+    text-shadow: 0px 1px 1px var(--tw-text-shadow-color, rgb(0 0 0 / 0.2));
+  }
+  .md\:mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:mb-4 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:mb-10 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:mb-12 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:mb-16 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 16);
+    }
   }
   .md\:block {
     @media (width >= 48rem) {
@@ -408,14 +455,50 @@
       display: none;
     }
   }
+  .md\:size-fit {
+    @media (width >= 48rem) {
+      width: fit-content;
+      height: fit-content;
+    }
+  }
   .md\:w-38 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 38);
     }
   }
+  .md\:w-150 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 150);
+    }
+  }
+  .md\:w-160 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 160);
+    }
+  }
+  .md\:w-200 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 200);
+    }
+  }
   .md\:w-220 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 220);
+    }
+  }
+  .md\:w-\[58px\] {
+    @media (width >= 48rem) {
+      width: 58px;
+    }
+  }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
+  .md\:w-xs {
+    @media (width >= 48rem) {
+      width: var(--container-xs);
     }
   }
   .md\:flex-col {
@@ -428,9 +511,49 @@
       flex-direction: row;
     }
   }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:items-end {
+    @media (width >= 48rem) {
+      align-items: flex-end;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
+    }
+  }
+  .md\:justify-end {
+    @media (width >= 48rem) {
+      justify-content: flex-end;
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
+  .md\:gap-0 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 0);
+    }
+  }
   .md\:gap-9 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
     }
   }
   .md\:gap-14 {
@@ -448,9 +571,49 @@
       align-self: flex-end;
     }
   }
+  .md\:overflow-hidden {
+    @media (width >= 48rem) {
+      overflow: hidden;
+    }
+  }
   .md\:bg-\[url\(\.\.\/assets\/img\/golden-knight-background-desktop\.png\)\] {
     @media (width >= 48rem) {
       background-image: url(../assets/img/golden-knight-background-desktop.png);
+    }
+  }
+  .md\:bg-\[position\:0\%_100\%\] {
+    @media (width >= 48rem) {
+      background-position: 0% 100%;
+    }
+  }
+  .md\:bg-left-bottom {
+    @media (width >= 48rem) {
+      background-position: left bottom;
+    }
+  }
+  .md\:bg-left-top {
+    @media (width >= 48rem) {
+      background-position: left top;
+    }
+  }
+  .md\:bg-no-repeat {
+    @media (width >= 48rem) {
+      background-repeat: no-repeat;
+    }
+  }
+  .md\:px-16 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:pt-10 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pt-20 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .md\:pt-40 {
@@ -458,9 +621,29 @@
       padding-top: calc(var(--spacing) * 40);
     }
   }
+  .md\:pr-35 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 35);
+    }
+  }
+  .md\:pr-45 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 45);
+    }
+  }
+  .md\:pr-50 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 50);
+    }
+  }
   .md\:pr-55 {
     @media (width >= 48rem) {
       padding-right: calc(var(--spacing) * 55);
+    }
+  }
+  .md\:pb-0 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .md\:pb-16 {
@@ -510,6 +693,46 @@
       --tw-drop-shadow: var(--tw-drop-shadow-size);
     }
   }
+  .md\:drop-shadow-black\/50 {
+    @media (width >= 48rem) {
+      --tw-drop-shadow-color: color-mix(in srgb, #000 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-drop-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 50%, transparent) var(--tw-drop-shadow-alpha), transparent);
+      }
+      --tw-drop-shadow: var(--tw-drop-shadow-size);
+    }
+  }
+  .md\:text-shadow-black\/25 {
+    @media (width >= 48rem) {
+      --tw-text-shadow-color: color-mix(in srgb, #000 25%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 25%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .md\:text-shadow-black\/50 {
+    @media (width >= 48rem) {
+      --tw-text-shadow-color: color-mix(in srgb, #000 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 50%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .md\:text-shadow-lg {
+    @media (width >= 48rem) {
+      text-shadow: 0px 1px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 3px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 4px 8px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
+    }
+  }
+  .md\:text-shadow-sm {
+    @media (width >= 48rem) {
+      text-shadow: 0px 1px 0px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075)), 0px 1px 1px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075)), 0px 2px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075));
+    }
+  }
+  .md\:text-shadow-xs {
+    @media (width >= 48rem) {
+      text-shadow: 0px 1px 1px var(--tw-text-shadow-color, rgb(0 0 0 / 0.2));
+    }
+  }
   .md\:hover\:underline {
     @media (width >= 48rem) {
       &:hover {
@@ -517,6 +740,16 @@
           text-decoration-line: underline;
         }
       }
+    }
+  }
+  .lg\:px-16 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:px-30 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 30);
     }
   }
 }
@@ -665,6 +898,51 @@ h1 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -697,6 +975,17 @@ h1 {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
     }
   }
 }
