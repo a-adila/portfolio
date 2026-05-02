@@ -190,7 +190,7 @@
       <!-- Homepage wrapper (END) -->
     </div>
     <!-- Homepage background (END)-->
-    <main class="main__container md:px-25 px-4 md:text-lg">
+    <main class="main__container px-4 md:px-0 md:text-lg text-base-content">
       <section id="about-me">
         <h2 class="about-me__title">About me</h2>
         <p class="about-me__subtitle">
@@ -205,15 +205,18 @@
         </p>
       </section>
       <!-- Current mood -->
-      <section id="current-mood">
-        <h2 class="mood__title">Tranquillement, je deviens dev</h2>
-        <p class="mood__status">Humeur du moment</p>
-        <p class="mood__content">
-          Je prépare le diplôme de Développeur web et web mobile à l'AFPA de
-          Bègles, et je cherche une entreprise prête à m'accueillir le temps
-          d'un stage. J'ai hâte de découvrir le quotidien d'une vraie équipe
-          dev, d'apprendre sur le terrain et d'apporter ce que je sais faire !
-          Dates : à compléter
+      <section id="mood" class="flex flex-col gap-12 items-center bg-accent/40">
+        <h2 class="mood__title md:w-140">Tranquillement, je deviens dev</h2>
+        <p class="mood__status absolute md:hidden">Humeur du moment</p>
+        <p class="mood__content text-justify md:w-194">
+          Je prépare le diplôme de
+          <strong>Développeur web et web mobile</strong> à l'AFPA de Bègles, et
+          je cherche une entreprise prête à m'accueillir le temps d'un stage.
+          J'ai hâte de découvrir le quotidien d'une vraie équipe dev,
+          d'apprendre sur le terrain et d'apporter ce que je sais faire !
+          <br />
+          <br /><strong>Dates : à compléter</strong>
+          <!-- Rajouter emojis !!! -->
         </p>
       </section>
       <section class="cta">
