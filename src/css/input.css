@@ -1,18 +1,5 @@
 @import "tailwindcss";
-
-/* Font imports */
-@font-face {
-  font-family: "FigtreeRegular";
-  src: url("../assets/fonts/Figtree-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BroadsheetRegular";
-  src: url("../assets/fonts/Broadsheet LDO.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
+@import "custom.css";
 
 @plugin "daisyui";
 @plugin "daisyui/theme" {
@@ -27,26 +14,6 @@
   --color-accent: #859bae;
 }
 
-body {
-  font-family: "FigtreeRegular";
-}
-
-h1,
-section h2 {
-  font-family: "BroadsheetRegular";
-}
-
-/* Responsive styles */
-@media (width >= 48rem) {
-  .main__container section {
-    padding: 100px 235px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 3rem;
-  }
-}
 @theme {
   /* Fonts */
   --font-figtreeRegular: "FigtreeRegular", sans-serif;
