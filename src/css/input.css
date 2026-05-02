@@ -14,6 +14,18 @@
   font-style: normal;
 }
 
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #fbfbfb;
+  --color-base-200: #fcf9ef;
+  --color-base-content: #170e02;
+  --color-primary: #caaa96;
+  --color-accent: #859bae;
+}
+
 body {
   font-family: "FigtreeRegular";
 }
