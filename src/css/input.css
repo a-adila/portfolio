@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "custom.css";
+@import "./custom.css";
 
 @plugin "daisyui";
 @plugin "daisyui/theme" {
@@ -20,4 +20,10 @@
   --font-broadsheetRegular: "BroadsheetRegular", serif;
   /* Colors */
   --color-beige-500: #fcf9ef;
+}
+
+@layer components {
+  .inputs {
+    @apply border border-primary rounded-2xl py-2 px-4;
+  }
 }
