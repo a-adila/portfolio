@@ -23,6 +23,7 @@ section h2 {
   font-family: "BroadsheetRegular";
 }
 
+/* Responsive styles */
 @media (width >= 48rem) {
   .main__container section {
     padding: 100px 235px;
