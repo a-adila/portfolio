@@ -244,7 +244,7 @@
       <!-- Homepage wrapper (END) -->
     </div>
     <!-- Homepage background (END)-->
-    <main class="main__container md:px-0 md:text-lg text-base-content">
+    <main class="main md:px-0 md:text-lg text-base-content">
       <section id="about-me">
         <h2 class="about-me__title">About me</h2>
         <p class="about-me__subtitle">
@@ -261,7 +261,7 @@
       <!-- Current mood -->
       <section
         id="mood"
-        class="flex flex-col gap-12 items-center md:bg-accent/40 md:mx-0 mx-4 border border-accent md:border-0 md:rounded-none md:px-0 md:py-0 rounded-2xl px-9 py-20"
+        class="flex flex-col gap-12 items-center md:bg-accent/40 md:mx-0 mx-4 border border-accent md:border-0 md:rounded-none px-9 my-20 md:my-0 md:px-0 md:py-0 rounded-2xl"
       >
         <h2 class="mood__title md:w-140 text-base-content">
           Tranquillement, je deviens dev
@@ -279,17 +279,21 @@
         </p>
       </section>
       <!-- CTA -->
-      <section class="cta flex flex-col items-center gap-13">
-        <h2 class="cta__title">
+      <section class="cta flex flex-col items-center gap-13 bg-primary/5">
+        <h2 class="cta__title md:w-210">
           La meilleure façon de savoir si on peut
           <span class="text-primary">travailler ensemble </span> ? Se parler !
         </h2>
         <button class="btn-primary">Je réponds, promis !</button>
       </section>
-      <section id="tools">
+      <!-- Tools -->
+      <section id="tools" class="flex flex-col gap-10">
         <h2 class="tools__title">Ma boîte à outils</h2>
+        <p class="tools__subtitle">
+          Ce avec quoi je travaille, et ce que j'apprends encore.
+        </p>
         <div
-          class="md:mx-auto md:size-fit grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 md:gap-y-5 md:gap-x-20"
+          class="tools__card-wrapper md:mx-auto md:size-fit grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 md:gap-y-5 md:gap-x-20 gap-y-4"
         >
           <!-- HTML card -->
           <div class="tools__icons stack-card mx-auto">

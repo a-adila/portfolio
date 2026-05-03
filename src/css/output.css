@@ -207,6 +207,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-20 {
+    margin-block: calc(var(--spacing) * 20);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -288,6 +291,9 @@
   .gap-7 {
     gap: calc(var(--spacing) * 7);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
@@ -305,6 +311,9 @@
   }
   .gap-40 {
     gap: calc(var(--spacing) * 40);
+  }
+  .gap-y-4 {
+    row-gap: calc(var(--spacing) * 4);
   }
   .self-center {
     align-self: center;
@@ -361,9 +370,6 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
-  }
-  .py-20 {
-    padding-block: calc(var(--spacing) * 20);
   }
   .py-25 {
     padding-block: calc(var(--spacing) * 25);
@@ -458,6 +464,11 @@
       margin-inline: auto;
     }
   }
+  .md\:my-0 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 0);
+    }
+  }
   .md\:mb-8 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 8);
@@ -507,6 +518,11 @@
   .md\:w-200 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 200);
+    }
+  }
+  .md\:w-210 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 210);
     }
   }
   .md\:flex-1 {
@@ -604,16 +620,6 @@
       gap: calc(var(--spacing) * 15);
     }
   }
-  .md\:gap-20 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:gap-22 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 22);
-    }
-  }
   .md\:gap-26 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 26);
@@ -622,11 +628,6 @@
   .md\:gap-x-20 {
     @media (width >= 48rem) {
       column-gap: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:gap-y-2\.5 {
-    @media (width >= 48rem) {
-      row-gap: calc(var(--spacing) * 2.5);
     }
   }
   .md\:gap-y-5 {
@@ -787,25 +788,36 @@ h3 {
   color: #fcf9ef;
 }
 @media (width >= 48rem) {
-  .main__container section {
-    padding: 100px 235px;
-    text-align: center;
-  }
-  .main__container section:nth-child(6) {
-    padding: 100px 180px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 3rem;
+  .main {
+    & section {
+      padding: 100px 235px;
+      text-align: center;
+    }
+    & section:nth-child(6) {
+      padding: 100px 180px;
+      text-align: center;
+    }
+    & h2 {
+      font-size: 3rem;
+    }
+    & p {
+      font-size: 1.5rem;
+    }
   }
 }
 @media (width <= 40rem) {
-  h2 {
-    font-size: 2.3rem;
-    text-align: center;
-  }
-  .main__container section {
-    padding: 80px 16px;
+  .main {
+    & section {
+      padding: 80px 16px;
+    }
+    & p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    & h2 {
+      font-size: 2.3rem;
+      text-align: center;
+    }
   }
 }
 @layer components {
