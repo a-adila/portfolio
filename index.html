@@ -190,7 +190,7 @@
       <!-- Homepage wrapper (END) -->
     </div>
     <!-- Homepage background (END)-->
-    <main class="main__container px-4 md:px-0 md:text-lg text-base-content">
+    <main class="main__container md:px-0 md:text-lg text-base-content">
       <section id="about-me">
         <h2 class="about-me__title">About me</h2>
         <p class="about-me__subtitle">
@@ -205,9 +205,14 @@
         </p>
       </section>
       <!-- Current mood -->
-      <section id="mood" class="flex flex-col gap-12 items-center bg-accent/40">
-        <h2 class="mood__title md:w-140">Tranquillement, je deviens dev</h2>
-        <p class="mood__status absolute md:hidden">Humeur du moment</p>
+      <section
+        id="mood"
+        class="flex flex-col gap-12 items-center md:bg-accent/40 md:mx-0 mx-4 border border-accent md:border-0 md:rounded-none md:px-0 md:py-0 rounded-2xl px-9 py-20"
+      >
+        <h2 class="mood__title md:w-140 text-base-content">
+          Tranquillement, je deviens dev
+        </h2>
+        <!-- <p class="mood__status absolute hidden">Humeur du moment</p> -->
         <p class="mood__content text-justify md:w-194">
           Je prépare le diplôme de
           <strong>Développeur web et web mobile</strong> à l'AFPA de Bègles, et
@@ -229,39 +234,109 @@
         <h2 class="tools__title">Ma boîte à outils</h2>
       </section>
       <!-- Contact me -->
-      <section class="contact-me" id="contact-me">
-        <div>
-          <h2 class="contact-me__title">
-            Vous avec un projet en tête ou vous souhaitez travailler avec moi ?
-            Envoyez-moi un message !
+      <section
+        class="contact-me mx-4 md:mx-0 md:flex md:flex-row-reverse md:gap-26 md:justify-between bg-primary/5"
+        id="contact-me"
+      >
+        <div
+          class="contact-me__title-and-socials md:flex md:flex-col md:items-center md:gap-14 md:flex-1"
+        >
+          <h2 class="contact-me__title md:text-6xl">
+            Vous avec un <span>projet</span> en tête ou vous souhaitez
+            <span>travailler avec moi</span> ? Envoyez-moi un message !
           </h2>
-          <div>
-            <a href=""><img src="" alt="" class="footer__socials" /></a
-            ><a href=""><img src="" alt="" class="footer__socials" /></a
-            ><a href=""><img src="" alt="" class="footer__socials" /></a>
+          <div class="contact-me__socials md:flex md:flex-row md:gap-9">
+            <!-- Github icon -->
+            <a href=""
+              ><svg
+                width="34"
+                height="33"
+                viewBox="0 0 34 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-black"
+              >
+                <path
+                  d="M16.6667 0C14.478 0 12.3107 0.431096 10.2886 1.26867C8.26652 2.10625 6.4292 3.33391 4.88155 4.88155C1.75595 8.00716 0 12.2464 0 16.6667C0 24.0333 4.78333 30.2833 11.4 32.5C12.2333 32.6333 12.5 32.1167 12.5 31.6667V28.85C7.88333 29.85 6.9 26.6167 6.9 26.6167C6.13333 24.6833 5.05 24.1667 5.05 24.1667C3.53333 23.1333 5.16667 23.1667 5.16667 23.1667C6.83333 23.2833 7.71667 24.8833 7.71667 24.8833C9.16667 27.4167 11.6167 26.6667 12.5667 26.2667C12.7167 25.1833 13.15 24.45 13.6167 24.0333C9.91667 23.6167 6.03333 22.1833 6.03333 15.8333C6.03333 13.9833 6.66667 12.5 7.75 11.3167C7.58333 10.9 7 9.16667 7.91667 6.91667C7.91667 6.91667 9.31667 6.46667 12.5 8.61667C13.8167 8.25 15.25 8.06667 16.6667 8.06667C18.0833 8.06667 19.5167 8.25 20.8333 8.61667C24.0167 6.46667 25.4167 6.91667 25.4167 6.91667C26.3333 9.16667 25.75 10.9 25.5833 11.3167C26.6667 12.5 27.3 13.9833 27.3 15.8333C27.3 22.2 23.4 23.6 19.6833 24.0167C20.2833 24.5333 20.8333 25.55 20.8333 27.1V31.6667C20.8333 32.1167 21.1 32.65 21.95 32.5C28.5667 30.2667 33.3333 24.0333 33.3333 16.6667C33.3333 14.478 32.9022 12.3107 32.0647 10.2886C31.2271 8.26652 29.9994 6.4292 28.4518 4.88155C26.9041 3.33391 25.0668 2.10625 23.0447 1.26867C21.0226 0.431096 18.8554 0 16.6667 0Z"
+                  fill="currentColor"
+                /></svg
+            ></a>
+            <!-- Linkedin icon -->
+            <a href="">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-black"
+              >
+                <path
+                  d="M11.6667 28.3333V16.6667M35 13.3333V26.6667C35 28.8768 34.122 30.9964 32.5592 32.5592C30.9964 34.122 28.8768 35 26.6667 35H13.3333C11.1232 35 9.00358 34.122 7.44078 32.5592C5.87797 30.9964 5 28.8768 5 26.6667V13.3333C5 11.1232 5.87797 9.00358 7.44078 7.44078C9.00358 5.87797 11.1232 5 13.3333 5H26.6667C28.8768 5 30.9964 5.87797 32.5592 7.44078C34.122 9.00358 35 11.1232 35 13.3333Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.3332 28.3334V22.9167M18.3332 22.9167V16.6667M18.3332 22.9167C18.3332 16.6667 28.3332 16.6667 28.3332 22.9167V28.3334M11.6665 11.6834L11.6832 11.665"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+
+            <!-- WhatsApp icon -->
+            <a href="">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-black"
+              >
+                <path
+                  d="M31.7498 8.18334C30.2216 6.64019 28.4015 5.41662 26.3957 4.58395C24.3898 3.75127 22.2383 3.32615 20.0665 3.33334C10.9665 3.33334 3.54984 10.75 3.54984 19.85C3.54984 22.7667 4.3165 25.6 5.74984 28.1L3.4165 36.6667L12.1665 34.3667C14.5832 35.6833 17.2998 36.3833 20.0665 36.3833C29.1665 36.3833 36.5832 28.9667 36.5832 19.8667C36.5832 15.45 34.8665 11.3 31.7498 8.18334ZM20.0665 33.5833C17.5998 33.5833 15.1832 32.9167 13.0665 31.6667L12.5665 31.3667L7.3665 32.7333L8.74984 27.6667L8.4165 27.15C7.04575 24.9618 6.31805 22.4321 6.3165 19.85C6.3165 12.2833 12.4832 6.11668 20.0498 6.11668C23.7165 6.11668 27.1665 7.55001 29.7498 10.15C31.0292 11.4231 32.043 12.9376 32.7325 14.6056C33.4221 16.2735 33.7735 18.0618 33.7665 19.8667C33.7998 27.4333 27.6332 33.5833 20.0665 33.5833ZM27.5998 23.3167C27.1832 23.1167 25.1498 22.1167 24.7832 21.9667C24.3998 21.8333 24.1332 21.7667 23.8498 22.1667C23.5665 22.5833 22.7832 23.5167 22.5498 23.7833C22.3165 24.0667 22.0665 24.1 21.6498 23.8833C21.2332 23.6833 19.8998 23.2333 18.3332 21.8333C17.0998 20.7333 16.2832 19.3833 16.0332 18.9667C15.7998 18.55 15.9998 18.3333 16.2165 18.1167C16.3998 17.9333 16.6332 17.6333 16.8332 17.4C17.0332 17.1667 17.1165 16.9833 17.2498 16.7167C17.3832 16.4333 17.3165 16.2 17.2165 16C17.1165 15.8 16.2832 13.7667 15.9498 12.9333C15.6165 12.1333 15.2665 12.2333 15.0165 12.2167H14.2165C13.9332 12.2167 13.4998 12.3167 13.1165 12.7333C12.7498 13.15 11.6832 14.15 11.6832 16.1833C11.6832 18.2167 13.1665 20.1833 13.3665 20.45C13.5665 20.7333 16.2832 24.9 20.4165 26.6833C21.3998 27.1167 22.1665 27.3667 22.7665 27.55C23.7498 27.8667 24.6498 27.8167 25.3665 27.7167C26.1665 27.6 27.8165 26.7167 28.1498 25.75C28.4998 24.7833 28.4998 23.9667 28.3832 23.7833C28.2665 23.6 28.0165 23.5167 27.5998 23.3167Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
           </div>
         </div>
-
-        <form action="#">
-          <div class="contact-me__inputs flex flex-col gap-5">
-            <div class="flex flex-col gap-3">
-              <label for="name">Votre Prénom - Nom</label
-              ><input type="text" placeholder="Prénom - Nom" />
+        <form action="#" class="md:w-200 md:flex-1">
+          <div class="contact-me__inputs flex flex-col gap-5 md:flex-row">
+            <div class="flex flex-col gap-2.5 md:flex-1 md:items-start">
+              <label for="name" class="">Votre Prénom - Nom</label
+              ><input
+                type="text"
+                placeholder="Prénom - Nom"
+                class="inputs"
+                required
+              />
             </div>
-            <div class="flex flex-col gap-3">
-              <label for="email">Votre email</label
-              ><input type="email" placeholder="hello@me.fr" />
+            <div class="flex flex-col gap-2.5 md:flex-3 md:items-start">
+              <label for="email" class="">Votre email</label
+              ><input
+                type="email"
+                placeholder="hello@me.fr"
+                class="inputs"
+                required
+              />
             </div>
           </div>
-          <div class="flex flex-col gap-3 mt-5">
-            <label for="message">Votre message</label>
+          <div class="flex flex-col gap-2.5 mt-5 md:items-start">
+            <label for="message" class="">Votre message</label>
             <textarea
               name=""
               id=""
-              class="contact-me__message"
+              class="contact-me__message inputs w-full"
               placeholder="Votre message"
+              required
             ></textarea
-            ><button class="contact__button">Envoyer</button>
+            ><button class="contact__button md:self-center">Envoyer</button>
           </div>
         </form>
       </section>

@@ -30,6 +30,10 @@ section h2 {
     padding: 100px 235px;
     text-align: center;
   }
+  .main__container section:nth-child(6) {
+    padding: 100px 180px;
+    text-align: center;
+  }
 
   h2 {
     font-size: 3rem;

@@ -16,6 +16,6 @@
 
 @layer components {
   .inputs {
-    @apply border border-primary rounded-2xl py-2 px-4;
+    @apply border-2 border-primary rounded-2xl py-2 px-4;
   }
 }
