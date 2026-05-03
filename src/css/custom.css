@@ -1,12 +1,18 @@
 /* Font imports */
 @font-face {
-  font-family: "FigtreeRegular";
+  font-family: "Figtree";
   src: url("../assets/fonts/Figtree-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "BroadsheetRegular";
+  font-family: "Figtree";
+  src: url("../assets/fonts/Figtree-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Broadsheet";
   src: url("../assets/fonts/Broadsheet LDO.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -14,13 +20,20 @@
 
 /* OVERALL  */
 body {
-  font-family: "FigtreeRegular";
+  font-family: "Figtree";
+  font-size: 400;
   background-color: #FBFBFB;
 }
 
 h1,
 section h2 {
-  font-family: "BroadsheetRegular";
+  font-family: "Broadsheet";
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #fcf9ef;
 }
 
 
