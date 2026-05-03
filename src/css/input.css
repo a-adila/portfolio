@@ -27,4 +27,8 @@
   .btn-secondary {
     @apply w-38 font-bold border px-5 py-3 rounded-4xl  bg-white/20 shadow-inner uppercase backdrop-blur-xs hover:bg-base-200 hover:text-accent ease-in duration-300;
   }
+
+  .stack-card {
+    @apply rounded-2xl shadow-sm size-fit p-6;
+  }
 }
