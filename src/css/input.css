@@ -15,7 +15,13 @@
 }
 
 @layer components {
+  /* Form inputs */
   .inputs {
     @apply border-2 border-primary rounded-2xl py-2 px-4;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply w-38 font-bold border px-5 py-3 rounded-4xl bg-white/20 shadow-inner uppercase;
   }
 }

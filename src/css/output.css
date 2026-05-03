@@ -271,6 +271,9 @@
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
   .gap-18 {
     gap: calc(var(--spacing) * 18);
   }
@@ -389,6 +392,9 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-accent {
+    color: var(--color-accent);
+  }
   .text-base-100 {
     color: var(--color-base-100);
   }
@@ -397,6 +403,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-primary {
+    color: var(--color-primary);
   }
   .uppercase {
     text-transform: uppercase;
@@ -452,11 +461,6 @@
       width: calc(var(--spacing) * 14.5);
     }
   }
-  .md\:w-38 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 38);
-    }
-  }
   .md\:w-140 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 140);
@@ -482,19 +486,9 @@
       flex: 1;
     }
   }
-  .md\:flex-2 {
-    @media (width >= 48rem) {
-      flex: 2;
-    }
-  }
   .md\:flex-3 {
     @media (width >= 48rem) {
       flex: 3;
-    }
-  }
-  .md\:flex-4 {
-    @media (width >= 48rem) {
-      flex: 4;
     }
   }
   .md\:flex-col {
@@ -725,6 +719,9 @@ h1, section h2 {
     font-size: 2.3rem;
     text-align: center;
   }
+  .main__container section {
+    padding: 80px 16px;
+  }
 }
 @layer components {
   .inputs {
@@ -734,6 +731,23 @@ h1, section h2 {
     border-color: var(--color-primary);
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
+  }
+  .btn {
+    width: calc(var(--spacing) * 38);
+    border-radius: var(--radius-4xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    background-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 3);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
 @property --tw-border-style {
