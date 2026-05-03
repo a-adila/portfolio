@@ -44,9 +44,12 @@ h3 {
       padding: 100px 235px;
       text-align: center;
     }
+    & section:nth-child(1) {
+      padding: 100px 80px;
+
+    }
     & section:nth-child(6) {
       padding: 100px 180px;
-      text-align: center;
     }
   
     & h2 {

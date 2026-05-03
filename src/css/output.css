@@ -8,12 +8,12 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-7xl: 80rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -348,9 +348,6 @@
       background-color: color-mix(in oklab, var(--color-primary) 5%, transparent);
     }
   }
-  .bg-slate-500 {
-    background-color: var(--color-slate-500);
-  }
   .bg-white\/80 {
     background-color: color-mix(in srgb, #fff 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -471,16 +468,6 @@
       grid-column: span 2 / span 2;
     }
   }
-  .md\:col-span-3 {
-    @media (width >= 48rem) {
-      grid-column: span 3 / span 3;
-    }
-  }
-  .md\:col-span-4 {
-    @media (width >= 48rem) {
-      grid-column: span 4 / span 4;
-    }
-  }
   .md\:col-start-1 {
     @media (width >= 48rem) {
       grid-column-start: 1;
@@ -491,29 +478,19 @@
       grid-column-start: 2;
     }
   }
-  .md\:col-start-3 {
-    @media (width >= 48rem) {
-      grid-column-start: 3;
-    }
-  }
   .md\:col-start-4 {
     @media (width >= 48rem) {
       grid-column-start: 4;
     }
   }
-  .md\:col-start-5 {
-    @media (width >= 48rem) {
-      grid-column-start: 5;
-    }
-  }
-  .md\:col-end-2 {
-    @media (width >= 48rem) {
-      grid-column-end: 2;
-    }
-  }
   .md\:col-end-3 {
     @media (width >= 48rem) {
       grid-column-end: 3;
+    }
+  }
+  .md\:col-end-4 {
+    @media (width >= 48rem) {
+      grid-column-end: 4;
     }
   }
   .md\:col-end-5 {
@@ -524,11 +501,6 @@
   .md\:col-end-6 {
     @media (width >= 48rem) {
       grid-column-end: 6;
-    }
-  }
-  .md\:col-end-7 {
-    @media (width >= 48rem) {
-      grid-column-end: 7;
     }
   }
   .md\:row-start-1 {
@@ -546,19 +518,9 @@
       grid-row-start: 3;
     }
   }
-  .md\:row-end-2 {
-    @media (width >= 48rem) {
-      grid-row-end: 2;
-    }
-  }
   .md\:row-end-3 {
     @media (width >= 48rem) {
       grid-row-end: 3;
-    }
-  }
-  .md\:row-end-4 {
-    @media (width >= 48rem) {
-      grid-row-end: 4;
     }
   }
   .md\:row-end-5 {
@@ -612,19 +574,14 @@
       height: fit-content;
     }
   }
-  .md\:h-200 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 200);
-    }
-  }
-  .md\:h-220 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 220);
-    }
-  }
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
+    }
+  }
+  .md\:w-7xl {
+    @media (width >= 48rem) {
+      width: var(--container-7xl);
     }
   }
   .md\:w-14\.5 {
@@ -642,6 +599,11 @@
       width: calc(var(--spacing) * 160);
     }
   }
+  .md\:w-185 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 185);
+    }
+  }
   .md\:w-194 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 194);
@@ -655,6 +617,61 @@
   .md\:w-210 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 210);
+    }
+  }
+  .md\:w-300 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 300);
+    }
+  }
+  .md\:w-302 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 302);
+    }
+  }
+  .md\:w-310 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 310);
+    }
+  }
+  .md\:w-320 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 320);
+    }
+  }
+  .md\:w-322 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 322);
+    }
+  }
+  .md\:w-350 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 350);
+    }
+  }
+  .md\:w-380 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 380);
+    }
+  }
+  .md\:w-400 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 400);
+    }
+  }
+  .md\:w-\[240px\] {
+    @media (width >= 48rem) {
+      width: 240px;
+    }
+  }
+  .md\:w-\[740px\] {
+    @media (width >= 48rem) {
+      width: 740px;
+    }
+  }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
     }
   }
   .md\:flex-1 {
@@ -677,24 +694,14 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
-  .md\:grid-cols-5 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-  }
-  .md\:grid-cols-6 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-    }
-  }
   .md\:grid-rows-2 {
     @media (width >= 48rem) {
       grid-template-rows: repeat(2, minmax(0, 1fr));
     }
   }
-  .md\:grid-rows-4 {
+  .md\:grid-rows-\[repeat\(4\,170px\)\] {
     @media (width >= 48rem) {
-      grid-template-rows: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(4,170px);
     }
   }
   .md\:flex-col {
@@ -750,6 +757,11 @@
   .md\:gap-5 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:gap-8 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 8);
     }
   }
   .md\:gap-9 {
@@ -812,21 +824,42 @@
       border-radius: 0;
     }
   }
+  .md\:border {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .md\:border-0 {
     @media (width >= 48rem) {
       border-style: var(--tw-border-style);
       border-width: 0px;
     }
   }
-  .md\:border-2 {
-    @media (width >= 48rem) {
-      border-style: var(--tw-border-style);
-      border-width: 2px;
-    }
-  }
   .md\:border-primary {
     @media (width >= 48rem) {
       border-color: var(--color-primary);
+    }
+  }
+  .md\:bg-accent {
+    @media (width >= 48rem) {
+      background-color: var(--color-accent);
+    }
+  }
+  .md\:bg-accent\/10 {
+    @media (width >= 48rem) {
+      background-color: color-mix(in srgb, #859bae 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-accent) 10%, transparent);
+      }
+    }
+  }
+  .md\:bg-accent\/20 {
+    @media (width >= 48rem) {
+      background-color: color-mix(in srgb, #859bae 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-accent) 20%, transparent);
+      }
     }
   }
   .md\:bg-accent\/40 {
@@ -842,14 +875,17 @@
       background-color: var(--color-blue-500);
     }
   }
-  .md\:bg-green-500 {
-    @media (width >= 48rem) {
-      background-color: var(--color-green-500);
-    }
-  }
   .md\:bg-primary {
     @media (width >= 48rem) {
       background-color: var(--color-primary);
+    }
+  }
+  .md\:bg-primary\/10 {
+    @media (width >= 48rem) {
+      background-color: color-mix(in srgb, #caaa96 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
+      }
     }
   }
   .md\:bg-red-500 {
@@ -865,6 +901,16 @@
   .md\:bg-\[url\(\.\.\/assets\/img\/golden-knight-background-desktop\.png\)\] {
     @media (width >= 48rem) {
       background-image: url(../assets/img/golden-knight-background-desktop.png);
+    }
+  }
+  .md\:object-contain {
+    @media (width >= 48rem) {
+      object-fit: contain;
+    }
+  }
+  .md\:object-cover {
+    @media (width >= 48rem) {
+      object-fit: cover;
     }
   }
   .md\:p-5 {
@@ -946,6 +992,12 @@
       text-underline-offset: 8px;
     }
   }
+  .md\:shadow-sm {
+    @media (width >= 48rem) {
+      --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
   .md\:text-shadow-black\/25 {
     @media (width >= 48rem) {
       --tw-text-shadow-color: color-mix(in srgb, #000 25%, transparent);
@@ -1011,9 +1063,11 @@ h3 {
       padding: 100px 235px;
       text-align: center;
     }
+    & section:nth-child(1) {
+      padding: 100px 80px;
+    }
     & section:nth-child(6) {
       padding: 100px 180px;
-      text-align: center;
     }
     & h2 {
       font-size: 3rem;
