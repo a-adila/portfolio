@@ -22,7 +22,7 @@
 
   /* Buttons */
   .btn-primary {
-    @apply w-38 font-bold border px-5 py-3 rounded-4xl  bg-primary md:hover:bg-base-100 md:hover:text-primary text-base-200 shadow-inner uppercase ease-in duration-300;
+    @apply size-fit font-bold border px-5 py-3 rounded-4xl  bg-primary md:hover:bg-base-100 md:hover:text-primary text-base-200 shadow-inner uppercase ease-in duration-300;
   }
   .btn-secondary {
     @apply w-38 font-bold border px-5 py-3 rounded-4xl  bg-white/20 shadow-inner uppercase backdrop-blur-xs hover:bg-base-200 hover:text-accent ease-in duration-300;
