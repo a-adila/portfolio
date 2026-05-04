@@ -3,8 +3,8 @@
 
 @theme {
   /* Fonts */
-  --font-figtreeRegular: "FigtreeRegular", sans-serif;
-  --font-broadsheetRegular: "BroadsheetRegular", serif;
+  --font-figtree: "Figtree", sans-serif;
+  --font-broadsheet: "Broadsheet", serif;
   /* Colors */
   --color-beige-500: #fcf9ef;
   --color-base-100: #fbfbfb;
@@ -30,5 +30,13 @@
 
   .stack-card {
     @apply rounded-2xl shadow-sm size-fit p-6;
+  }
+
+  @media (width >= 48rem) {
+    .main {
+      & p {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

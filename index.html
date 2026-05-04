@@ -138,6 +138,7 @@
                 <button class="btn-secondary">On tente ?</button>
               </div>
               <div class="hero__links__socials flex flex-row gap-6">
+                <!-- GitHub -->
                 <a
                   href="https://github.com/a-adila/Portfolio"
                   aria-label="Voir mon profil GitHub"
@@ -157,6 +158,7 @@
                     />
                   </svg>
                 </a>
+                <!-- LinkedIn -->
                 <a
                   href="https://www.linkedin.com/in/adila-k/"
                   aria-label="Voir mon profil LinkedIn"
@@ -185,6 +187,7 @@
                       stroke-linejoin="round"
                     /></svg
                 ></a>
+                <!-- Whatsapp -->
                 <a href="#" aria-label="Me contacter sur WhatsApp">
                   <svg
                     width="40"
@@ -201,6 +204,7 @@
                     />
                   </svg>
                 </a>
+                <!-- Download CV -->
                 <a href="#" aria-label="Télécharger mon CV"
                   ><svg
                     width="40"
@@ -233,7 +237,7 @@
           /></a>
         </section>
         <!-- DESKTOP Arrow scroll down -->
-        <a href="about-me" class="block self-center"
+        <a href="#about-me" class="block self-center"
           ><img
             src="src/assets/img/icons/arrow-down.svg"
             alt="Aller à la section À propos"
@@ -280,23 +284,28 @@
           </div>
           <!-- Card - Solaire  -->
           <div
-            class="bento__card md:row-start-1 md:border md:border-primary md:row-end-3 md:col-start-2 md:col-end-4 md:p-10 md:rounded-2xl md:shadow-sm"
+            class="bento__card md:row-start-1 md:border md:border-primary md:row-end-3 md:col-start-2 md:col-end-4 md:p-10 md:rounded-2xl md:shadow-sm flex flex-col justify-between"
           >
-            <div>
-              <p>Solaire</p>
-              <p>Curieuse</p>
+            <div class="flex flex-col items-start">
+              <p class="font-broadsheet md:text-5xl">Solaire</p>
+              <p class="uppercase font-bold md:text-5xl">Curieuse</p>
             </div>
 
-            <div>
-              <p>Une dev' web en quête de solutions</p>
-              <p>... et de sourires !</p>
+            <div class="text-left flex flex-row items-end justify-between">
+              <p class="md:text-4xl flex-3">
+                Une dev' web en quête de
+                <span class="font-bold">solutions</span>
+              </p>
+              <p class="flex-3 text-right">... et de sourires !</p>
             </div>
           </div>
           <!-- Card bug -->
           <div
-            class="bento__card cta-card md:row-start-3 md:row-end-5 md:bg-accent md:rounded-2xl md:shadow-sm"
+            class="bento__card cta-card md:row-start-3 md:row-end-5 md:bg-accent md:rounded-2xl md:shadow-sm flex flex-row justify-center items-center"
           >
-            <p>Chaque bug est une énigme.</p>
+            <p class="md:text-5xl">
+              Chaque bug est une <span class="font-bold">énigme</span>.
+            </p>
           </div>
           <!-- CTA Card  -->
           <div
@@ -350,7 +359,9 @@
           La meilleure façon de savoir si on peut
           <span class="text-primary">travailler ensemble </span> ? Se parler !
         </h2>
-        <button class="btn-primary">Je réponds, promis !</button>
+        <button class="btn-primary">
+          <a href="#contact-me">Je réponds, promis !</a>
+        </button>
       </section>
       <!-- Tools -->
       <section id="tools" class="flex flex-col gap-10">
