@@ -32,6 +32,37 @@
     @apply rounded-2xl shadow-sm size-fit p-6;
   }
 
+  /* BENTO DESIGN */
+  .md-bento-design {
+    @apply md:w-322 md:grid md:grid-cols-4 md:grid-rows-[repeat(4,170px)] md:gap-5 md:p-5 md:mx-auto md:rounded-4xl;
+  }
+  .md-sunny-card {
+    @apply md:row-start-1 md:border md:border-primary md:row-end-3 md:col-start-2 md:col-end-4 md:p-8 md:rounded-2xl md:flex md:flex-col md:justify-between md:relative md:overflow-hidden;
+  }
+
+  .spotify-card {
+    @apply md:row-start-2 md:row-end-5 md:col-start-4 md:col-end-5 md:col-span-2;
+  }
+
+  @media (width <= 40rem) {
+    .main {
+      & section {
+        padding: 80px 16px;
+      }
+      & section:nth-child(1) {
+        @apply px-10;
+      }
+      & p {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      & h2 {
+        font-size: 2.3rem;
+        text-align: center;
+      }
+    }
+  }
+
   @media (width >= 48rem) {
     .main {
       & p {

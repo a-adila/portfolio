@@ -259,12 +259,10 @@
           Un peu de code et beaucoup de curiosité !
         </p>
         <!-- BENTO CARD CONTAINER -->
-        <div
-          class="bento md:w-322 md:grid md:grid-cols-4 md:grid-rows-[repeat(4,170px)] md:gap-5 md:p-5 mx-auto md:rounded-4xl"
-        >
-          <!-- Card my very first project -->
+        <div class="bento md-bento-design">
+          <!-- Card my very first project (mobile : 4) -->
           <div
-            class="bento__card md:bg-slate-500 md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-5 md:rounded-2xl md:shadow-sm md:overflow-hidden"
+            class="bento__card md:bg-slate-500 md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-5 rounded-2xl md:shadow-sm overflow-hidden order-4"
           >
             <img
               src="src/assets/img/first-project.png"
@@ -272,9 +270,9 @@
               class="md:w-full md:h-full md:object-cover"
             />
           </div>
-          <!-- Card my best travel -->
+          <!-- Card my best travel (mobile : 2) -->
           <div
-            class="bento__card md:row-start-1 md:row-end-3 md:col-span-1 md:rounded-2xl md:shadow-sm md:overflow-hidden"
+            class="bento__card md:row-start-1 md:row-end-3 md:col-span-1 rounded-2xl md:shadow-sm overflow-hidden order-2"
           >
             <img
               src="src/assets/img/martinique-trip.png"
@@ -282,40 +280,45 @@
               class="md:h-full md:w-full md:object-cover"
             />
           </div>
-          <!-- Card - Solaire  -->
+          <!-- Card - Solaire (mobile : 1) -->
           <div
-            class="bento__card md:row-start-1 md:border md:border-primary md:row-end-3 md:col-start-2 md:col-end-4 md:p-10 md:rounded-2xl md:shadow-sm flex flex-col justify-between relative overflow-hidden"
+            class="bento__card md-sunny-card flex flex-col justify-between gap-10 p-4 overflow-hidden border border-primary rounded-2xl order-1"
           >
             <!-- Sun -->
             <img
               src="src/assets/img/icons/sun-solid.svg"
-              class="absolute -top-32 -right-35 w-sm"
+              class="md:absolute md:-top-32 md:-right-35 md:w-sm w-lg order-2 md:order-0"
               alt=""
             />
-            <div class="flex flex-col items-start">
-              <p class="font-broadsheet md:text-5xl">Solaire</p>
-              <p class="uppercase font-bold md:text-5xl">Curieuse</p>
+            <div class="flex flex-col items-start order-1 md:order-0">
+              <p class="font-broadsheet text-5xl">Solaire</p>
+              <p class="uppercase font-bold text-5xl">Curieuse</p>
             </div>
 
-            <div class="text-left flex flex-row items-end justify-between">
-              <p class="md:text-4xl flex-3">
+            <div
+              class="text-left flex md:flex-row flex-col md:items-end md:justify-between"
+            >
+              <p class="text-4xl flex-3 text-left">
                 Une dev' web en quête de
-                <span class="font-bold">solutions</span>
+                <span class="font-bold text-[#7F5E55]">solutions</span>
               </p>
-              <p class="flex-3 text-right">... et de sourires !</p>
+              <p class="flex-3 text-right md:text-left font-semibold">
+                ... et de sourires !
+              </p>
             </div>
           </div>
-          <!-- Card bug -->
+          <!-- Card bug (mobile : 5) -->
           <div
-            class="bento__card cta-card md:row-start-3 md:row-end-5 md:bg-accent/50 md:rounded-2xl md:shadow-sm flex flex-row justify-center items-center"
+            class="bento__card cta-card md:row-start-3 md:row-end-5 py-40 px-4 bg-accent/50 rounded-2xl md:shadow-sm flex flex-row justify-center items-center order-5"
           >
-            <p class="md:text-5xl font-light">
-              Chaque bug est une <span class="font-semibold">énigme</span>.
+            <p class="text-4xl font-light">
+              Chaque bug est une <span class="font-semibold">énigme</span> à
+              résoudre.
             </p>
           </div>
-          <!-- CTA Card  -->
+          <!-- CTA Card  (mobile : 3)  -->
           <div
-            class="bento__card md:col-span-2 md:col-start-4 md:col-end-5 text-base-100 md:bg-primary md:hover:bg-base-100 md:hover:text-primary md:p-5 md:rounded-2xl md:shadow-sm flex flex-col justify-between md:ease-in md:duration-300"
+            class="bento__card md:col-span-2 md:col-start-4 md:col-end-5 text-base-100 bg-primary md:hover:bg-base-100 md:hover:text-primary p-5 rounded-2xl md:shadow-sm flex flex-col gap-20 justify-between ease-in duration-300 order-3"
           >
             <span class="font-broadsheet text-2xl text-left"
               >Une question ?</span
@@ -324,9 +327,9 @@
               <a href="#contact-me">Contactez-moi !</a>
             </p>
           </div>
-          <!-- Spotify Card  -->
+          <!-- Spotify Card  (mobile : 6) -->
           <div
-            class="bento__card spotify-card md:row-start-2 md:row-end-5 md:col-start-4 md:col-end-5 md:col-span-2 md:rounded-2xl md:overflow-hidden md:shadow-sm"
+            class="bento__card spotify-card rounded-2xl overflow-hidden md:shadow-sm order-6"
           >
             <img
               src="src/assets/img/spotify-card.png"
