@@ -217,17 +217,11 @@
   .order-2 {
     order: 2;
   }
-  .order-3 {
-    order: 3;
-  }
   .order-4 {
     order: 4;
   }
   .order-5 {
     order: 5;
-  }
-  .order-6 {
-    order: 6;
   }
   .container {
     width: 100%;
@@ -577,11 +571,6 @@
     }
   }
   .md\:order-0 {
-    @media (width >= 48rem) {
-      order: 0;
-    }
-  }
-  .md\:order-none {
     @media (width >= 48rem) {
       order: 0;
     }
@@ -1184,11 +1173,9 @@ h3 {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .md-bento-design {
+    display: grid;
     @media (width >= 48rem) {
       margin-inline: auto;
-    }
-    @media (width >= 48rem) {
-      display: grid;
     }
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 322);
@@ -1208,6 +1195,9 @@ h3 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 5);
     }
+  }
+  .mobile-bento-design {
+    row-gap: calc(var(--spacing) * 4);
   }
   .md-sunny-card {
     @media (width >= 48rem) {
@@ -1304,7 +1294,7 @@ h3 {
       padding-block: calc(var(--spacing) * 3);
     }
     @media (width >= 48rem) {
-      color: var(--color-primary);
+      color: var(--color-accent);
     }
     @media (width >= 48rem) {
       text-transform: uppercase;
@@ -1324,7 +1314,7 @@ h3 {
     @media (width >= 48rem) {
       &:hover {
         @media (hover: hover) {
-          background-color: var(--color-primary);
+          background-color: var(--color-accent);
         }
       }
     }
@@ -1356,10 +1346,20 @@ h3 {
     }
     @media (width >= 48rem) {
       border-style: var(--tw-border-style);
-      border-width: 2px;
+      border-width: 1px;
+    }
+    @media (width >= 48rem) {
+      border-color: color-mix(in srgb, #caaa96 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        border-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+      }
     }
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 2);
+    }
+    @media (width >= 48rem) {
+      --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .projects__card__title {

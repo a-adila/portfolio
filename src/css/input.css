@@ -70,8 +70,13 @@
 
   /* BENTO DESIGN */
   .md-bento-design {
-    @apply md:w-322 md:grid md:grid-cols-4 md:grid-rows-[repeat(4,170px)] md:gap-5 md:p-5 md:mx-auto md:rounded-4xl;
+    @apply md:w-322 grid md:grid-cols-4 md:grid-rows-[repeat(4,170px)] md:gap-5 md:p-5 md:mx-auto md:rounded-4xl;
   }
+
+  .mobile-bento-design {
+    @apply gap-y-4;
+  }
+
   .md-sunny-card {
     @apply md:row-start-1 md:border md:border-primary md:row-end-3 md:col-start-2 md:col-end-4 md:p-8 md:rounded-2xl md:flex md:flex-col md:justify-between md:relative md:overflow-hidden;
   }
@@ -83,10 +88,10 @@
   /* Projects section */
 
   .projects__name__btn {
-    @apply md:flex md:flex-row md:flex-nowrap md:justify-start md:gap-5 md:w-50 md:border md:px-5 md:py-3 md:rounded-4xl md:bg-base-100 md:hover:text-base-100 md:text-primary md:hover:bg-primary md:shadow-inner md:uppercase md:ease-in md:duration-300;
+    @apply md:flex md:flex-row md:flex-nowrap md:justify-start md:gap-5 md:w-50 md:border md:px-5 md:py-3 md:rounded-4xl md:bg-base-100 md:hover:text-base-100 md:text-accent md:hover:bg-accent md:shadow-inner md:uppercase md:ease-in md:duration-300;
   }
   .projects__card {
-    @apply md:border-2 md:rounded-2xl md:h-fit md:max-w-167 flex flex-col md:items-center md:gap-10 md:p-2;
+    @apply md:border md:border-primary/20 md:shadow md:rounded-2xl md:h-fit md:max-w-167 flex flex-col md:items-center md:gap-10 md:p-2;
   }
 
   .projects__card__title {
