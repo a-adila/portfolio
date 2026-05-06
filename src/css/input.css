@@ -1,6 +1,41 @@
 @import "tailwindcss";
 @import "./custom.css";
 
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #fbfbfb;
+  --color-base-200: #fcf9ef;
+  --color-base-300: #e8d8c8;
+  --color-base-content: #170e02;
+  --color-primary: #caaa96;
+  --color-primary-content: #fcf9ef;
+  --color-secondary: oklch(65% 0.241 354.308);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: #859bae;
+  --color-accent-content: #fafaf8;
+  --color-neutral: #fcf9ef;
+  --color-neutral-content: #170e02;
+  --color-info: #7f5e55;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.5rem;
+  --radius-field: 1rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.3125rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
 @theme {
   /* Fonts */
   --font-figtree: "Figtree", sans-serif;
@@ -22,8 +57,9 @@
 
   /* Buttons */
   .btn-primary {
-    @apply size-fit font-bold border px-5 py-3 rounded-4xl  bg-primary md:hover:bg-base-100 md:hover:text-primary text-base-200 shadow-inner uppercase ease-in duration-300;
+    @apply size-fit font-bold border px-5 py-3 rounded-4xl  bg-primary md:hover:bg-base-100 md:hover:text-primary text-base-200 uppercase ease-in duration-300;
   }
+
   .btn-secondary {
     @apply w-38 font-bold border px-5 py-3 rounded-4xl  bg-white/20 shadow-inner uppercase backdrop-blur-xs hover:bg-base-200 hover:text-accent ease-in duration-300;
   }
@@ -44,6 +80,34 @@
     @apply md:row-start-2 md:row-end-5 md:col-start-4 md:col-end-5 md:col-span-2;
   }
 
+  /* Projects section */
+
+  .projects__name__btn {
+    @apply md:flex md:flex-row md:flex-nowrap md:justify-start md:gap-5 md:w-50 md:border md:px-5 md:py-3 md:rounded-4xl md:bg-base-100 md:hover:text-base-100 md:text-primary md:hover:bg-primary md:shadow-inner md:uppercase md:ease-in md:duration-300;
+  }
+  .projects__card {
+    @apply md:border-2 md:rounded-2xl md:h-fit md:max-w-167 flex flex-col md:items-center md:gap-10 md:p-2;
+  }
+
+  .projects__card__title {
+    @apply text-3xl font-broadsheet;
+  }
+
+  .projects__context {
+    @apply md:font-bold md:text-lg md:italic md:w-fit md:text-nowrap;
+  }
+
+  .projects__problem,
+  .projects__solution {
+    @apply md:text-base md:text-left;
+  }
+
+  .projects__stack {
+    @apply flex flex-row justify-center gap-2;
+  }
+  .projects__stack-icon {
+    @apply md:w-6 w-8;
+  }
   @media (width <= 40rem) {
     .main {
       & section {
@@ -63,11 +127,11 @@
     }
   }
 
-  @media (width >= 48rem) {
+  /* @media (width >= 48rem) {
     .main {
       & p {
         font-size: 1.5rem;
       }
     }
-  }
+  } */
 }
