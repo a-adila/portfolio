@@ -87,11 +87,31 @@
 
   /* Projects section */
 
+  .projects__container {
+    @apply flex flex-col;
+  }
+
+  .projects__container-md {
+    @apply md:w-fit md:mx-auto md:flex md:flex-row md:justify-between md:h-full md:gap-20;
+  }
+
   .projects__name__btn {
     @apply md:flex md:flex-row md:flex-nowrap md:justify-start md:gap-5 md:w-50 md:border md:px-5 md:py-3 md:rounded-4xl md:bg-base-100 md:hover:text-base-100 md:text-accent md:hover:bg-accent md:shadow-inner md:uppercase md:ease-in md:duration-300;
   }
+
   .projects__card {
-    @apply md:border md:border-primary/20 md:shadow md:rounded-2xl md:h-fit md:max-w-167 flex flex-col md:items-center md:gap-10 md:p-2;
+    @apply border border-primary/20 shadow rounded-2xl h-fit max-w-167 flex flex-col items-center gap-10 p-6 order-1;
+  }
+
+  .projects__card-md {
+    @apply md:border md:border-primary/20 md:shadow md:rounded-2xl md:h-fit md:max-w-167 md:items-center md:gap-10 md:flex md:flex-col md:p-6 md:order-0;
+  }
+
+  .projects__card__content {
+    @apply flex flex-col gap-10;
+  }
+  .projects__card__content-md {
+    @apply md:flex md:flex-row md:gap-6;
   }
 
   .projects__card__title {
