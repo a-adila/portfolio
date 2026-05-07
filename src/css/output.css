@@ -253,6 +253,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -307,6 +310,9 @@
   .resize-none {
     resize: none;
   }
+  .list-inside {
+    list-style-position: inside;
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -343,6 +349,9 @@
   .gap-7 {
     gap: calc(var(--spacing) * 7);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -375,6 +384,9 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-l-lg {
     border-top-left-radius: var(--radius-lg);
@@ -640,6 +652,11 @@
       margin-block: calc(var(--spacing) * 0);
     }
   }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:mb-8 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 8);
@@ -786,6 +803,16 @@
       justify-content: space-between;
     }
   }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
+    }
+  }
+  .md\:justify-evenly {
+    @media (width >= 48rem) {
+      justify-content: space-evenly;
+    }
+  }
   .md\:justify-start {
     @media (width >= 48rem) {
       justify-content: flex-start;
@@ -896,16 +923,6 @@
   .md\:py-13 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 13);
-    }
-  }
-  .md\:pt-10 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 10);
-    }
-  }
-  .md\:pt-24 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 24);
     }
   }
   .md\:pr-35 {
@@ -1265,6 +1282,15 @@ h3 {
       gap: calc(var(--spacing) * 20);
     }
   }
+  .projects__name-mobile {
+    height: calc(var(--spacing) * 7);
+    width: calc(var(--spacing) * 7);
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-primary);
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
   .projects__name__btn {
     @media (width >= 48rem) {
       display: flex;
@@ -1305,10 +1331,6 @@ h3 {
     }
     @media (width >= 48rem) {
       text-transform: uppercase;
-    }
-    @media (width >= 48rem) {
-      --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
     @media (width >= 48rem) {
       --tw-duration: 300ms;
@@ -1406,6 +1428,9 @@ h3 {
     }
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
     }
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 6);

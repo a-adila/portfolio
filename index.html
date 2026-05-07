@@ -110,11 +110,11 @@
         <!-- (END) SIDE NAVBAR MOBILE -->
         <!-- Hero (START) -->
         <section
-          class="hero flex flex-col flex-1 pt-30 md:pt-24 justify-between items-center md:justify-start md:items-end"
+          class="hero flex flex-col flex-1 justify-between pt-30 items-center md:justify-center md:items-end"
         >
           <!-- (START) Hero title and links -->
           <div
-            class="hero__titleandlinks md:flex flex md:flex-col flex-col md:items-center md:gap-15 gap-32 md:pr-35 md:pt-10"
+            class="hero__titleandlinks flex flex-col md:items-center md:gap-15 gap-32 md:pr-35"
           >
             <h1
               class="text-5xl md:text-7xl md:text-right text-shadow-black/25 text-shadow-xs md:text-shadow-black/25 md:text-shadow-xs md:w-160"
@@ -339,7 +339,7 @@
         </div>
       </section>
       <!-- Projects -->
-      <section id="projects" class="md:flex md:flex-col md:gap-8">
+      <section id="projects" class="flex flex-col gap-8">
         <h2 class="projects__title">Mes projets</h2>
         <p class="projects__subtitle">
           Ce que j'ai imaginé, construit, et parfois cassé.
@@ -347,60 +347,76 @@
         <!-- Projects container -->
         <div class="projects__container projects__container-md">
           <!-- List of projects -->
-          <div
-            class="projects__list md:flex md:flex-col md:gap-3 order-2 md:order-0"
+          <ul
+            class="projects__list flex md:flex-col flex-row justify-center md:justify-start md:gap-3 gap-4 order-2 md:order-0 list-inside mt-6 md:mt-0"
           >
             <!-- Project 1 -->
-            <a href="#project-1" class="projects__name__btn">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
-                  fill="currentColor"
-                />
-              </svg>
+            <li class="projects__name-mobile">
+              <a href="#project-1"></a>
+            </li>
+            <li class="rounded-full md:rounded-0 hidden md:block">
+              <a href="#project-1" class="projects__name__btn rounded-full">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
+                    fill="currentColor"
+                  />
+                </svg>
 
-              <p>Projet 1</p>
-            </a>
-            <!-- Project 2 -->
-            <a href="#project-2" class="projects__name__btn">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <p>Projet 1</p>
+              </a>
+            </li>
+            <!-- Project 2  -->
+            <li class="projects__name-mobile">
+              <a href="#project-2"></a>
+            </li>
+            <li class="hidden md:block">
+              <a href="#project-2" class="projects__name__btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
+                    fill="currentColor"
+                  />
+                </svg>
 
-              <p>Projet 2</p>
-            </a>
-            <!-- Project 3 -->
-            <a href="#project-3" class="projects__name__btn">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <p>Projet 3</p>
-            </a>
-          </div>
+                <p>Projet 2</p>
+              </a>
+            </li>
+            <!-- Project 3  -->
+            <li class="projects__name-mobile">
+              <a href="#project-3"></a>
+            </li>
+            <li class="hidden md:block">
+              <a href="#project-3" class="projects__name__btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236ZM17.25 11.25H12.75V6.75C12.75 6.336 12.414 6 12 6C11.586 6 11.25 6.336 11.25 6.75V11.25H6.75C6.336 11.25 6 11.586 6 12C6 12.414 6.336 12.75 6.75 12.75H11.25V17.25C11.25 17.664 11.586 18 12 18C12.414 18 12.75 17.664 12.75 17.25V12.75H17.25C17.664 12.75 18 12.414 18 12C18 11.586 17.664 11.25 17.25 11.25Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p>Projet 3</p>
+              </a>
+            </li>
+          </ul>
+
           <!-- Project card -->
           <div id="#project-1" class="projects__card projects__card-md">
             <h4 class="projects__card__title">Titre du projet</h4>
@@ -408,7 +424,7 @@
             <div class="projects__card__content projects__card__content-md">
               <!-- Picture - Context - Stacks -->
               <div
-                class="projects__picture-context-stacks flex flex-col items-center gap-4"
+                class="projects__picture-context-stacks flex flex-col items-center mx-auto gap-4"
               >
                 <!-- Project picture -->
                 <img
@@ -800,7 +816,9 @@
           alt=""
           class="footer__scroll-up"
       /></a>
-      <ul class="footer__navbar hidden md:flex flex-row uppercase gap-18">
+      <ul
+        class="footer__navbar hidden md:flex flex-row md:justify-evenly uppercase gap-18"
+      >
         <li class="footer__navbar__links">
           <a href="#about-me">About me</a>
         </li>
